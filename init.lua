@@ -146,13 +146,7 @@ function farming.generate_tree(pos, trunk, leaves, underground, replacements)
 end
 
 farming.seeds = {
-	["farming:pumpkin_seed"]=60,
-	["farming_plus:strawberry_seed"]=30,
-	["farming_plus:rhubarb_seed"]=30,
-	["farming_plus:potatoe_seed"]=30,
-	["farming_plus:tomato_seed"]=30,
-	["farming_plus:orange_seed"]=30,
-	["farming_plus:carrot_seed"]=30,
+	["farming_cannabis:cannabis_seed"]=30,
 }
 
 
@@ -269,7 +263,3 @@ end
 
 -- ========= CANNABIS =========
 dofile(minetest.get_modpath("farming_cannabis").."/cannabis.lua")
-
-
--- ========= WEED =========
-dofile(minetest.get_modpath("farming_plus").."/weed.lua")

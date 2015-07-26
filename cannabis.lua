@@ -20,7 +20,7 @@ minetest.register_node("farming_cannabis:cannabis_sapling", {
 
 minetest.register_node("farming_cannabis:cannabis_leaves", {
 	drawtype = "allfaces_optional",
-	tiles = {"farming_banana_leaves.png"},
+	tiles = {"farming_cannabis_leaves.png"},
 	paramtype = "light",
 	groups = {snappy=3, leafdecay=3, flammable=2, not_in_creative_inventory=1},
  	drop = {
