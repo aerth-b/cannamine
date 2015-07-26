@@ -2,7 +2,7 @@
 local S
 S = farming.S
 
-minetest.register_node("farming_plus:cannabis_sapling", {
+minetest.register_node("farming_cannabis:cannabis_sapling", {
 	description = S("Cannabis Tree Sapling"),
 	drawtype = "plantlike",
 	tiles = {"farming_cannabis_sapling.png"},
@@ -18,7 +18,7 @@ minetest.register_node("farming_plus:cannabis_sapling", {
 	sounds = default.node_sound_defaults(),
 })
 
-minetest.register_node("farming_plus:cannabis_leaves", {
+minetest.register_node("farming_cannabis:cannabis_leaves", {
 	drawtype = "allfaces_optional",
 	tiles = {"farming_banana_leaves.png"},
 	paramtype = "light",
@@ -27,7 +27,7 @@ minetest.register_node("farming_plus:cannabis_leaves", {
 		max_items = 1,
 		items = {
 			{
-				items = {'farming_plus:cannabis_sapling'},
+				items = {'farming_cannabis:cannabis_sapling'},
 				rarity = 20,
 			},
 		}
@@ -36,11 +36,11 @@ minetest.register_node("farming_plus:cannabis_leaves", {
 })
 
 minetest.register_abm({
-	nodenames = {"farming_plus:cannabis_sapling"},
+	nodenames = {"farming_cannabis:cannabis_sapling"},
 	interval = 60,
 	chance = 20,
 	action = function(pos, node)
-		farming.generate_tree(pos, "default:tree", "farming_plus:cannabis_leaves", {"default:sand", "default:desert_sand"}, {["farming_plus:cannabis"]=20})
+		farming.generate_tree(pos, "default:tree", "farming_cannabis:cannabis_leaves", {"default:sand", "default:desert_sand"}, {["farming_cannabis:cannabis"]=20})
 	end
 })
 
@@ -51,11 +51,11 @@ minetest.register_on_generated(function(minp, maxp, blockseed)
 	local tmp = {x=(maxp.x-minp.x)/2+minp.x, y=(maxp.y-minp.y)/2+minp.y, z=(maxp.z-minp.z)/2+minp.z}
 	local pos = minetest.find_node_near(tmp, maxp.x-minp.x, {"default:desert_sand"})
 	if pos ~= nil then
-		farming.generate_tree({x=pos.x, y=pos.y+1, z=pos.z}, "default:tree", "farming_plus:cannabis_leaves", {"default:sand", "default:desert_sand"}, {["farming_plus:cannabis"]=20})
+		farming.generate_tree({x=pos.x, y=pos.y+1, z=pos.z}, "default:tree", "farming_cannabis:cannabis_leaves", {"default:sand", "default:desert_sand"}, {["farming_cannabis:cannabis"]=20})
 	end
 end)
 
-minetest.register_node("farming_plus:cannabis", {
+minetest.register_node("farming_cannabis:cannabis", {
 	description = S("Cannabis"),
 	tiles = {"farming_cannabis.png"},
 	visual_scale = 0.5,
@@ -69,13 +69,13 @@ minetest.register_node("farming_plus:cannabis", {
 	sounds = default.node_sound_defaults(),
 })
 
-minetest.register_craftitem("farming_plus:cannabis_bud", {
+minetest.register_craftitem("farming_cannabis:cannabis_bud", {
 	description = "Cannabis Bud",
 	inventory_image = "farming_cannabis_bud.png",
 })
 
 minetest.register_craft({
-	output = "farming_plus:cannabis_bud 10",
+	output = "farming_cannabis:cannabis_bud 10",
 	type = "shapeless",
-	recipe = {"farming_plus:cannabis"},
+	recipe = {"farming_cannabis:cannabis"},
 })
