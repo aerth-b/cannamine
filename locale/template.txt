@@ -1,0 +1,6 @@
+# Template
+
+### cannabis.lua ###
+Cannabis Tree Sapling = 
+Cannabis = 
+Cannabis Bud =
