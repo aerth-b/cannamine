@@ -1,6 +1,18 @@
 ===FARMING_CANNABIS MOD for MINETEST===
 by aerth
 
+DEPENDS: farming_plusplus ( or probably just plus)
+INSTALL:
+
+cd games/minetest_games/mods 
+git clone https://github.com/aerth/cannamine.git
+mv cannamine farming_plusplus/farming_cannabis
+
+
+
+
+
+
 License:
 Sourcecode: WTFPL (see below)
 Graphics: WTFPL (see below)
