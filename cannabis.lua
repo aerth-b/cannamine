@@ -79,7 +79,7 @@ minetest.register_craft({
 	type = "shapeless",
 	recipe = {"farming_cannabis:cannabis"},
 })
-minetest.register_craftitem("weed:weed_cigarette", {
+minetest.register_craftitem("farming_cannabis:cannabis_doobie", {
 image = "farming_cannabis_doobie.png",
 on_place = minetest.item_place,
 on_use = minetest.item_eat(1)
