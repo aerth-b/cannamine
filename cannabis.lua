@@ -89,6 +89,6 @@ minetest.register_craft({
 output = 'farming_cannabis:cannabis_doobie',
 recipe = {
 {'default:paper'},
-{'weed:weed_nug'},
+{'farming_cannabis:cannabis_bud'},
 }
 })
