@@ -80,7 +80,9 @@ minetest.register_craft({
 	recipe = {"farming_cannabis:cannabis"},
 })
 minetest.register_craftitem("farming_cannabis:cannabis_doobie", {
+description = "Cannabis Doobie",
 image = "farming_cannabis_doobie.png",
+description = "Cannabis Bud",
 on_place = minetest.item_place,
 on_use = minetest.item_eat(1)
 })
